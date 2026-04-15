@@ -1,0 +1,11 @@
+#!ipxe
+
+menu HashBoot
+item windows Windows 7 PE
+
+choose target && goto ${target}
+
+:windows
+kernel https://boot.netboot.xyz/memdisk iso raw
+initrd https://archive.org/download/Win7PE-LHHD/Seven_VietNam_X86.iso
+boot
